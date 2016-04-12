@@ -2,6 +2,11 @@
 #obtained. Due to no IP change hooks in the DHCP client change detection will
 #need to be done via scheduled script or a netwatch script.
 
+#The script will iterate through eoip tunnels with the comment of
+#"int_<interfacename>". It will then use <interfacename> to search the
+#dhcp-client list for a corresponding interface to obtain the current IP address
+#from.
+
 :local eoiptun;
 :local "current-vpn-ip";
 :local "new-vpn-ip";
