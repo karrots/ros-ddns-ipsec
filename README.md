@@ -1,7 +1,7 @@
 ros-ddns-ipsec
 ==============
 
-Mikrotik ROS script for changing IPSEC peer IP addresses when DNS changes.
+A collection of Mikrotik RouterOS scripts for updating IPSEC peers and EoIP tunnel local-addresses when DNS or WAN address changes.
 
 ###Requirements
 Requires ROS 6.2 or greater.
