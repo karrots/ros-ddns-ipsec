@@ -13,7 +13,7 @@
 :local "wan-int"
 
 /interface eoip;
-:foreach eoiptun in={[find where comment~"$int_.*"]} do={
+:foreach eoiptun in={[find where comment~"^int_.*"]} do={
 	:set "wan-int" ([get $eoiptun comment]);
 	:log info ($"wan-int");
 	:set "wan-int" ([:pick $"wan-int" 4 [:len $"wan-int"]]);

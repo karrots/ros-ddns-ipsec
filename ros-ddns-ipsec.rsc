@@ -15,7 +15,7 @@
 :local ipsecpolicy;
 :local iskillneeded;
 /ip ipsec peer;
-:foreach ipsecpeer in={[find where comment~"$addr_.*"]} do={
+:foreach ipsecpeer in={[find where comment~"^addr_.*"]} do={
 	:set "vpn-dns-name" ([get $ipsecpeer comment]);
 	:set "vpn-dns-name" ([:pick $"vpn-dns-name" 5 [:len $"vpn-dns-name"]]);
 	:set "new-vpn-ip" [:resolve $"vpn-dns-name"]
